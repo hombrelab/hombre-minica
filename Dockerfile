@@ -4,8 +4,9 @@ FROM hombrelab/hombre-golang AS builder
 
 RUN apk add --no-cache \
     git \
-    build-base \
-    && go get github.com/jsha/minica
+    build-base
+
+RUN go get github.com/jsha/minica
 
 FROM hombrelab/hombre-alpine
 
